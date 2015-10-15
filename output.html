@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Scheduler Output Viewer</title>
+  <link rel="stylesheet" type="text/css" href="html/output.css">
+  <script src="html/jquery-2.1.1.min.js"></script>
+  <script src="output_process.js"></script>
+  <script src="output_event.js"></script>
+  <script src="html/output.js"></script>
+</head>
+<body>
+  <div class="stats">
+  <div class="stat"><div class="stat-border">Total Processes<div id="stat_proc"></div></div></div>
+  <div class="stat"><div class="stat-border">Average Turnaround Time<div id="stat_turn"></div></div></div>
+  <div class="stat"><div class="stat-border">Average Waiting Time<div id="stat_wait"></div></div></div>
+  </div>
+  <div class="gantt">
+    <div id="gantt_grid"></div>
+  </div>
+  <table id="table">
+    <thead>
+      <tr>
+        <td>PID</td>
+        <td>Arrival Time</td>
+        <td>Terminate Time</td>
+        <td>Burst</td>
+        <td>Initial Priority</td>
+        <td>Turnaround Time</td>
+        <td>Total Waiting Time</td>
+      </tr>
+    </thead>
+  </table>
+  <div id="info">
+    PID: <div id="info-pid"></div><br>
+    Current Priority: <div id="info-pri"></div><br>
+    Start Time: <div id="info-start"></div><br>
+    Stop Time: <div id="info-stop"></div>
+  </div>
+</body>
+</html>
